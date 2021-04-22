@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="style.css">
+
 <% if current_user %>
   Hello, <%= current_user.username %>!.
   <%= link_to "Log Out", logout_path %>
@@ -22,7 +24,11 @@
 
 
 <% if current_user %>
-<p> Hello, <%= current_user.username %>!</p>
+<p> Hello, <%= current_user.username %>!
+<div id="photo">
+<%= image_tag current_user.image %>
+</div>
+</p>
 
 <% else %>
   <%= link_to new_user_path do %>
