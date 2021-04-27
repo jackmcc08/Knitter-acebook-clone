@@ -1,8 +1,9 @@
+<p id=”notice”><%= notice %></p>
 <% @posts.each do |post| %>
   <p class="post"><%= post.message %>
 
   <br>Posted by: <%= User.find(post.user_id).username %>
-  <%= link_to "Add Friend", friends_path(:other_user_id => @user), :method => :post %>
+  <%= link_to "Add Friend", friends_path(:friend, :user_id => current_user.id, :other_user_id => User.find(post.user_id).id), :method => :post %>
   </p>
 <% end %>
 
