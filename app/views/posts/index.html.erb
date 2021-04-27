@@ -9,7 +9,7 @@
 <% @posts.each do |post| %>
   <p class="post"><%= post.message %>
 
-  <br>Posted by: <%= User.find(post.user_id).username %>
+  <br>Posted by: <%= link_to User.find(post.user_id).username, new_friend_path %>
   </p>
 <% end %>
 
