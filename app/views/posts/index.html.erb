@@ -1,7 +1,8 @@
 <% @posts.each do |post| %>
   <p class="post"><%= post.message %>
 
-  <br>Posted by: <%= link_to User.find(post.user_id).username, new_friend_path %>
+  <br>Posted by: <%= User.find(post.user_id).username %>
+  <%= link_to "Add Friend", friends_path(:other_user_id => @user), :method => :post %>
   </p>
 <% end %>
 

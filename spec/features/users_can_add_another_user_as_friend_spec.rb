@@ -5,8 +5,7 @@ RSpec.feature "Adding friend", type: :feature do
     post_message("I'm looking for friends", 'Nata')
     click_link 'Log Out'
     sign_up('Max')
-    click_link 'Nata'
-    click_link 'Friend'
+    click_link 'Add Friend'
     expect(page).to have_content("Friends: Nata")
   end
 end
