@@ -2,7 +2,7 @@
 <% @posts.each do |post| %>
   <p class="post"><%= post.message %>
 
-  <br>Posted by: <%= User.find(post.user_id).username %>
+  <br>Posted by:  <%= User.find(post.user_id).username %>
   <% if current_user %>
        <%= link_to "Add Friend", friends_path(:user_id => current_user.id, :other_user_id => User.find(post.user_id).id), :method => :post %>
        <% end %>
@@ -13,7 +13,14 @@
   <%= link_to new_post_path do %>
     New post
   <% end %>
+  <br>
+<div= friend_list>
+<% current_user.friends.each do |friend|%>
+  <%= User.find(friend.other_user_id).username %>
+  <br>
+  <% end %>
+</div>
+
 <% end %>
 
-<br>
-<br>
+

@@ -6,6 +6,7 @@ RSpec.feature "Adding friend", type: :feature do
     click_link 'Log Out'
     sign_up('Max')
     click_link 'Add Friend'
-    expect(page).to have_content("Friend Added")
+    click_link 'Add Friend'
+    expect(page).to have_content("Unable to add friend")
   end
 end

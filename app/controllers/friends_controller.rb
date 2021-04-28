@@ -8,7 +8,7 @@ class FriendsController < ApplicationController
 
   def create
     if already_friends?
-      flash[:notice] = "Unable to add friend."
+      flash[:notice] = "Unable to add friend"
       redirect_to posts_url
     else
       @friend = Friend.create(:user_id => params[:user_id], :other_user_id => params[:other_user_id])
