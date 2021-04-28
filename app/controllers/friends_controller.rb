@@ -9,14 +9,6 @@ class FriendsController < ApplicationController
   def create
     # @friend = current_user.friends.build(:other_user_id => params[:other_user_id])
     @friend = Friend.new(:user_id => params[:user_id], :other_user_id => params[:other_user_id])
-    puts 'NEW FRIEND'
-    puts @friend
-    puts 'NEW FRIEND2'
-    puts params[:user_id]
-    puts 'NEW FRIEND3'
-    puts params[:other_user_id]
-    puts 'NEW FRIEND4'
-    puts current_user.friends
     if @friend.save
       flash[:notice] = "Friend Added"
       redirect_to posts_url
