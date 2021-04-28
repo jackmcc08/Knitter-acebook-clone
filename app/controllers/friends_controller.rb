@@ -7,20 +7,19 @@ class FriendsController < ApplicationController
   end
 
   def create
-    # @friend = current_user.friends.build(:other_user_id => params[:other_user_id])
-    @friend = Friend.new(:user_id => params[:user_id], :other_user_id => params[:other_user_id])
-    if @friend.save
-      flash[:notice] = "Friend Added"
+    if already_friends?
+      flash[:notice] = "Unable to add friend."
       redirect_to posts_url
     else
-      flash[:notice] = "Unable to add friend."
+      @friend = Friend.create(:user_id => params[:user_id], :other_user_id => params[:other_user_id])
+      flash[:notice] = "Friend Added"
       redirect_to posts_url
     end
   end
 
   private
 
-  # def post_params
-  #   params.require(:friend).permit(:user_id, :other_user_id)
-  # end
+  def already_friends?
+    Friend.where(user_id: current_user.id, other_user_id: params[:other_user_id]).exists?
+  end
 end
