@@ -15,8 +15,11 @@
   <% end %>
   <br>
 <div class="friend_list">
+  Friend List:
 <% current_user.friends.each do |friend|%>
-  <%= User.find(friend.other_user_id).username %>
+<% puts current_user.friends %>
+<% puts User.find(friend.other_user_id).username %>
+  <%= User.find(friend.other_user_id).username  %>
   <br>
   <% end %>
 </div>
