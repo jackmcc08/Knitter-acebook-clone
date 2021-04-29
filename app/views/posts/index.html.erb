@@ -66,11 +66,12 @@
 </div>
 
       <div class="friend_list">
-      Friend List:
-      <% current_user.friends.each do |friend| %>
-      <%= friend.username %>
-
-        <br>
+      <% if current_user %>
+        Friend List:
+        <% current_user.friends.each do |friend| %>
+        <%= friend.username %>
+          <br>
+        <% end %>
       <% end %>
       </div>
 

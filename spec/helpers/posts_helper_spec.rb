@@ -13,8 +13,7 @@ def post_photo()
 end
 
 def log_in(username)
-  click_link "Log In"
   fill_in "Username", with: username
-  fill_in "Password", with: "Password88"
-  click_button "Login"
+  fill_in "Password", with: "password"
+  click_button "LOG IN"
 end
