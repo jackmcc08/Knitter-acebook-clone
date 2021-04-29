@@ -20,8 +20,8 @@ $(document).ready(() => {
 		$(`#top-comments-${e.target.id}`).toggle();
 	});
 
-	$('.login-button').click((e) => {
-		$(e.target).toggle();
-		$('.login-form').toggle();
-	})
+	// $('.login-button').click((e) => {
+	// 	$(e.target).toggle();
+	// 	$('.login-form').toggle();
+	// })
 });
