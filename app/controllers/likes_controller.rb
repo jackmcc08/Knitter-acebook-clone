@@ -8,7 +8,10 @@ class LikesController < ApplicationController
     else
       @post.likes.create(user_id: current_user.id)
     end
-    redirect_to root_url
+    respond_to do |format|
+      format.html { redirect_to root_url }
+      format.js
+    end
   end
 
   private
@@ -19,9 +22,9 @@ class LikesController < ApplicationController
 
   def find_like
     @like = @post.likes.find_by(user_id: current_user.id, post_id: params[:post_id])
- end
+  end
 
   def already_liked?
-    Like.where(user_id: current_user.id, post_id: params[:post_id]).exists?
+    Like.exists?(user_id: current_user.id, post_id: params[:post_id])
   end
 end
