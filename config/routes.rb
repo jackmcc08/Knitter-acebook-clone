@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'messages/index'
+  get 'tearoom_messages/index'
   root 'posts#index'
 
   resources :users
@@ -7,6 +9,7 @@ Rails.application.routes.draw do
     resources :comments, only: [:create]
   end
   resources :sessions, only: [:new, :create, :destroy]
+  resources :messages, only: [:index, :new, :create]
 
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'

@@ -1,14 +1,15 @@
 import React from 'react';
 import './Chat.css';
+import MessageClient from './MessageClient';
+import ChatForm from './ChatForm';
 
 function Chat() {
 	return (
-		<div class="chat">
-			<div class="chat-display"></div>
-			<div class="chat-send">
-				<input type="text" placeholder="type message..." />
-				<button>SEND</button>
+		<div className="chat">
+			<div className="chat-display">
+				<MessageClient />
 			</div>
+			<ChatForm />
 		</div>
 	);
 }

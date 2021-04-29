@@ -13,7 +13,7 @@
 	background-image: url('https://wallpaperaccess.com/full/480027.jpg');
 }
 
-.chat-send {
+#chat-form {
 	display: grid;
 	grid-template-columns: 80% 20%;
 	height: 30px;
@@ -23,17 +23,35 @@
 	border-right: none;
 }
 
-.chat-send input {
+#chat-content {
 	border: none;
 }
 
-.chat-send button {
+#chat-submit {
 	background-color: white;
 	font-size: x-small;
 	border: none;
 }
 
-.chat-send button:hover {
+#chat-submit:hover {
 	background: rgba(0, 0, 0, 0.05);
 	cursor: pointer;
+}
+
+.message-wrapper {
+	display: grid;
+	grid-template-columns: 20% 80%;
+	font-size: x-small;
+}
+
+.message-poster {
+	background-color: white;
+	margin: 2px;
+	border-radius: 10px;
+}
+
+.message-content {
+	background-color: white;
+	margin: 2px;
+	border-radius: 10px;
 }

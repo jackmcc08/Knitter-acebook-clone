@@ -40,7 +40,9 @@
       <div class="right-container">
       </div>
 
-      <div class="tearoom"><%= javascript_pack_tag 'tearoom' %></div>
+      <% if current_user %>
+        <div class="tearoom"><%= javascript_pack_tag 'tearoom' %></div>
+      <% end %>
     </main>
   </body>
 </html>
