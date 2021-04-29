@@ -1,0 +1,8 @@
+<div class="friend_list">
+<%= @friend.username %>'s Friend List:
+   <br>
+   <% @friend.friends.each do |friend| %>
+   <%= friend.username %>
+     <br>
+   <% end %>
+ </div>
