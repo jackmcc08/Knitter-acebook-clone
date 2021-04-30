@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Acebook</title>
+    <title>Knitter</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-
+    <link rel="icon"
+    href="/k.png">
   </head>
 
   <body>
@@ -20,7 +21,9 @@
         <!-- </a> -->
         <% if current_user %>
           <div class="grid-item">
-            <a><%= image_tag current_user.image, id: "current-user-image"%></a>
+            <%= link_to friend_path(current_user.id), class: "friends-page" do %>
+              <%= image_tag current_user.image, id: "current-user-image"%>
+            <% end %>
           </div>
           <div class="username"><%= current_user.username %></div>
           <div class="grid-item"><a><%= link_to "Log Out", logout_path %></a></div>
