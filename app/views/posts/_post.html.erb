@@ -1,7 +1,14 @@
 <div class="post-content-author">
   <div class="poster">
-    <%= image_tag User.find(post.user_id).image, class: "post-profile-photo"%>
-    <p><%= User.find(post.user_id).username %></p>
+    <% if current_user %>
+      <%= link_to friend_path(post.user_id), class: "link_to_friends" do %>
+        <%= image_tag User.find(post.user_id).image, class: "post-profile-photo"%>
+          <p id="user-name"><%= User.find(post.user_id).username %></p>
+      <% end %>
+    <% end %>
+      <% if current_user && friendship_not_exists?(User.find(post.user_id)) && post.user_id != current_user.id%>
+        <%= link_to "Recruit Bridge Partner", friends_path(:user_id => current_user.id, :other_user_id => User.find(post.user_id).id), :method => :post, class: "friends-button" %>
+      <% end %>
 
   </div>
   <div class="post-content">
