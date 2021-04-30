@@ -16,7 +16,7 @@ export class MessageClient extends Component {
 	componentDidMount() {
 		setInterval(() => {
 			$.get('/messages').then(this.popMessages);
-		}, 4000);
+		}, 2000);
 	}
 
 	render() {
@@ -24,7 +24,15 @@ export class MessageClient extends Component {
 			<div>
 				{this.state.messages.length > 0 &&
 					this.state.messages.map((item) => (
-						<div className="message-wrapper" key={item.id} id={item.id}>
+						<div
+							className={
+								item.user_id === item.current_user_id
+									? 'message-wrapper current-user'
+									: 'message-wrapper'
+							}
+							key={item.id}
+							id={item.id}
+						>
 							<div className="message-poster">{item.username}</div>
 							<div className="message-content">{item.content}</div>
 						</div>

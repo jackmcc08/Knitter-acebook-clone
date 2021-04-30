@@ -14,11 +14,17 @@ export class ChatForm extends Component {
 	}
 
 	handleSubmit(event) {
-		alert('A name was submitted: ' + this.state.value);
 		event.preventDefault();
-		$.post('/messages', {
-			content: this.state.value,
-			action: 'postmsg',
+		$.ajax({
+			method: 'POST',
+			data: { content: this.state.value },
+			url: '/messages',
+			success: (data) => {
+				console.log(data);
+			},
+			error: (data) => {
+				console.log(data);
+			},
 		});
 	}
 

@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     resources :comments, only: [:create]
   end
   resources :sessions, only: [:new, :create, :destroy]
-  resources :messages, only: [:index, :new, :create]
+  resources :messages, only: [:index, :create]
 
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
