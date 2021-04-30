@@ -1,7 +1,7 @@
 <div class="post-content-author">
   <div class="poster">
     <% if current_user %>
-      <%= link_to friend_path(post.user_id) do %>
+      <%= link_to friend_path(post.user_id), class: "link_to_friends" do %>
         <%= image_tag User.find(post.user_id).image, class: "post-profile-photo"%>
           <p id="user-name"><%= User.find(post.user_id).username %></p>
       <% end %>
