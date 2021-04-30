@@ -6,7 +6,7 @@ The app is hosted on Heroku.
 - http://knitter-acebook.herokuapp.com/
 
 ## Summary
-Team Mugshot developed over a two week period this facebook clone - ruby-on-rails web application. 
+Team Mugshot developed over a two week period this facebook clone - ruby-on-rails web application.
 
 ## Developers:
 - Lou Reade
