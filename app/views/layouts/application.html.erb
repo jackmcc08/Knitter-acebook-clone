@@ -20,7 +20,7 @@
         <!-- </a> -->
         <% if current_user %>
           <div class="grid-item">
-            <%= link_to friend_path(current_user.id) do %>
+            <%= link_to friend_path(current_user.id), class: "friends-page" do %>
               <%= image_tag current_user.image, id: "current-user-image"%>
             <% end %>
           </div>
