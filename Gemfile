@@ -32,12 +32,14 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'jquery-rails'
+gem 'aws-sdk-s3', '~> 1.94'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
+  gem 'rails-controller-testing'
   gem 'rspec-rails', '~> 4.0'
   gem "rubocop", '~> 1.13', require: false
   gem "rubocop-rails"
