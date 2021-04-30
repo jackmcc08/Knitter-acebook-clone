@@ -21,14 +21,14 @@ We also had a strong focus on learning as a team, and each day we would share ou
 By the end of the two weeks, we had implemented a well rounded web application with multiple features (including posts with images, likes, comments and friending) and had great fun and a good learning experience.
 
 ## Developers:
-- Lou Reade
-- Ralph Bartley
-- Sha Cheng
-- David Greaves
-- Nata Sherchenkova
-- Max Strivens
-- Will Spencer
-- Jack McCarthy
+- Lou Reade (loushark)
+- Ralph Bartley (ralphbartley)
+- Sha Cheng (cspoppuppy)
+- David Greaves (dmgreaves)
+- Nata Sherchenkova (TataSher)
+- Max Strivens (mstrivens)
+- Will Spencer (willspencer16)
+- Jack McCarthy (jackmcc08)
 
 ## Techstack
 - Frontend Rendering and Backend - Ruby on Rails using Postgresql & AWS (for live version)
