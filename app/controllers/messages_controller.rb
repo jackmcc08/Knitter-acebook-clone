@@ -3,7 +3,7 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.create(message_params)
-    render root_url
+    render partial: 'messages/form'
   end
 
   def index
