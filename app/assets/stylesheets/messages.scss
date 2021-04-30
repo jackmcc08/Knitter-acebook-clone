@@ -1,3 +1,76 @@
 // Place all the styles related to the Messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.tearoom {
+	width: 80%;
+}
+
+.chat {
+	width: 70%;
+	margin-left: 80%;
+	background-color: white;
+	border: 1px solid #b5651d;
+	box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.3);
+	border-radius: 10px;
+	font-family: stitch;
+}
+
+#chat-form {
+	display: grid;
+	grid-template-columns: 80% 20%;
+	height: 30px;
+	border-top: 1px solid #b5651d;
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
+}
+
+#chat-content {
+	border: none;
+}
+
+#chat-submit {
+	background-color: white;
+	font-size: x-small;
+	border: none;
+}
+
+#chat-submit:hover {
+	background: rgba(0, 0, 0, 0.05);
+	cursor: pointer;
+}
+
+.chat-display {
+	width: 70%;
+	background-image: url('https://wallpaperaccess.com/full/480027.jpg');
+	display: grid; /* not working */
+	grid-template-columns: 100%; /* not working */
+	margin-top: 50px;
+	margin-left: 8%;
+	border: 1px solid #b5651d;
+}
+
+.message-wrapper {
+	font-size: x-small;
+	background-color: white;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	border-radius: 10px;
+	text-align: left;
+	width: 120px;
+}
+
+.current-user {
+	justify-items: right; /* not working */
+	background-color: powderblue;
+}
+
+.message-poster {
+	font-weight: bold;
+	color: green;
+	margin-left: 10px;
+}
+
+.message-content {
+	margin-left: 10px;
+}

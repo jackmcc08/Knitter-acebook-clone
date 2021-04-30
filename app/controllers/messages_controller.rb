@@ -1,13 +1,9 @@
 class MessagesController < ApplicationController
-  skip_before_action :verify_authenticity_token
+  # skip_before_action :verify_authenticity_token
 
   def create
-    P "-----------------------"
-    puts params
-    P "-----------------------"
-    @message = Message.create({content: params[:content], user_id: current_user.id})
-    # redirect_to root_url
-    render json: @message
+    @message = Message.create(message_params)
+    render root_url
   end
 
   def index
@@ -23,7 +19,7 @@ class MessagesController < ApplicationController
     render json: messages
   end
 
-  # def message_params
-  #   params.require(:message).permit(:content, :user_id)
-  # end
+  def message_params
+    params.require(:message).permit(:content, :user_id)
+  end
 end

@@ -1,0 +1,7 @@
+<%= form_with model: [ Message ], local: true, id: "chat-form" do |form| %>
+  <%= form.text_field :content, id: "chat-content", placeholder: 'Chating...', required: true%>
+
+  <%= form.hidden_field :user_id, :value => current_user.id if current_user %>
+
+  <%= form.submit "Submit", id: "chat-submit" %>
+<% end %>
