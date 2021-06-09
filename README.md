@@ -5,6 +5,7 @@
 The app is hosted on Heroku.
 - http://knitter-acebook.herokuapp.com/
 
+[Video Demo](https://youtu.be/Laqb11IdKBU)
 ## Summary
 Team Mugshot developed over a two week period a facebook clone called Knitter. It is a ruby-on-rails web application hosted on Heroku.
 
