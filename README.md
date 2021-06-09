@@ -2,8 +2,7 @@
 #### Makers Academy - Week 8-9 Group Engineering Challenge
 
 ## Live Version:
-The app is hosted on Heroku.
-- http://knitter-acebook.herokuapp.com/
+The app is hosted on Heroku. http://knitter-acebook.herokuapp.com/
 
 [Video Demo](https://youtu.be/Laqb11IdKBU)
 ## Summary
